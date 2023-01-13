@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seletores personalizados</title>
     <style>
+        
+        header{
+            background-color: rgba(154, 179, 179, 0.451);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            border-radius: auto;
+            height: 100px;
+            width: 980px;
+            padding: 10px;
+            margin: auto;
+        }
         body{
             background-color: rgba(154, 179, 179, 0.451);
             font-family: Arial, Helvetica, sans-serif;
@@ -18,6 +29,69 @@
             padding: 10px;
             margin: auto;
         } 
+
+        main > li{
+            list-style-type: ' ☞';
+            text-decoration: none;
+            color:rgb(53, 97, 97);
+        }
+
+        main > li:hover{
+            color:  rgb(119, 18, 18);
+        }
+
+        footer{
+            background-color: rgba(154, 179, 179, 0.451);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            border-radius: auto;
+            width: 980px;
+            padding: 10px;
+            margin: auto;
+        }
+
+        a{
+            color: rgb(57, 130, 130);;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover{
+            text-decoration: underline;
+            color: rgb(177, 74, 74);
+        }
+
+        a:active{
+            background-color: rgb(80, 211, 211);
+        }
+
+        a::after{
+            content: ' ☜ ';
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        div{
+            display: inline-block;
+            background-color: rgba(94, 167, 172, 0.251); ;
+            text-align: center;
+            border: 1px solid rgb(11, 8, 82);
+            border-radius: 6px;
+            height: 100px;
+            width: 100px;
+        }
+
+        div:hover{
+            background-color: rgba(0, 255, 255, 0.4);
+        }
+
+        div > p{
+            display: none;
+        }
+
+        div:hover > p{
+            display: block;
+        }
         
         h1{
             color:rgb(33, 120, 120);
@@ -31,6 +105,10 @@
 
         h2{
             color:rgb(46, 210, 222);
+        }
+
+        .observacao{
+            font-family:monospace;
         }
 
         .destaque{
@@ -51,20 +129,30 @@
 </head>
 <body>
     <main>
-        <h1 
-        id="principal">Aprendendo sobre seletores personalizados
-        </h1>
+        <header>
+            <h1
+            id="principal">Aprendendo sobre seletores personalizados
+            </h1>
+        </header>
 
         <h1 class="enfase">
             Seletores personalizados
         </h1>
+
+        <div>  ID (#)
+            <p>Único</p>
+        </div>
+
+        <div>  CLASS (.)
+            <p>Múltiplo</p>
+        </div>
 
         <h2 class="destaque ">
             ID (#)
         </h2>
 
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio voluptatem nulla at odit maiores praesentium. <span class="destaque" >Tempore error</span> laborum dolore eum! Sint velit dolores porro, neque autem eius dicta veritatis tempore.
+            São identificadores para personalizar um elemento. No HTML é identificado com id = "..." e no CSS com hashtag #
         </p>
 
         <h2 class="destaque">
@@ -72,112 +160,68 @@
         </h2>
 
         <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo et cumque, nemo placeat incidunt deleniti porro recusandae. Distinctio aliquid reiciendis architecto cum nulla quam corrupti nam? Harum minus adipisci explicabo.
+            São identificadores para personalizar mais de um elemento. No HTML é identificado com class = "..." e no CSS com um ponto .
         </p>
+        <p>
+            Se quiser aplicar a Class em um trecho do texto utilize a Tag SPAN no HTML.
+        </p>
+        <p class="observacao"> O id é único por página de HTML e a Class é multipla, sendo assim pode ser utilzada diversas vezes. Porém pode-se usar duas class no mesmo elemento, um id e uma class etc. Porém o id sobrepõe as configurações da class.</p>
 
         <h1 class="enfase">
-            Algumas Pseudo classes
+            Algumas Pseudo classes (:)
         </h1>
-
-        <h2>
-            Active:
-        </h2>
-
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias perferendis iusto vitae provident sunt veritatis debitis, temporibus ex enim aspernatur maiores nostrum dolor incidunt veniam sequi in ipsa rem qui.
-        </p>
-
-        <h2>
-            Checked:
-        </h2>
-
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias perferendis iusto vitae provident sunt veritatis debitis, temporibus ex enim aspernatur maiores nostrum dolor incidunt veniam sequi in ipsa rem qui.
-        </p>
-
-        <h2>
-            Empty:
-        </h2>
-
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias perferendis iusto vitae provident sunt veritatis debitis, temporibus ex enim aspernatur maiores nostrum dolor incidunt veniam sequi in ipsa rem qui.
-        </p>
-
-        <h2>
-            Enabled:
-        </h2>
-
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias perferendis iusto vitae provident sunt veritatis debitis, temporibus ex enim aspernatur maiores nostrum dolor incidunt veniam sequi in ipsa rem qui.
-        </p>
-
-        <h2>
-            Hover:
-        </h2>
-
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias perferendis iusto vitae provident sunt veritatis debitis, temporibus ex enim aspernatur maiores nostrum dolor incidunt veniam sequi in ipsa rem qui.
-        </p>
-
-        <h2>
-            Focus:
-        </h2>
-
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias perferendis iusto vitae provident sunt veritatis debitis, temporibus ex enim aspernatur maiores nostrum dolor incidunt veniam sequi in ipsa rem qui.
-        </p>
-
-        <h2>
-            Visited:
-        </h2>
-
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias perferendis iusto vitae provident sunt veritatis debitis, temporibus ex enim aspernatur maiores nostrum dolor incidunt veniam sequi in ipsa rem qui.
-        </p>
+            <li>
+                Active
+            </li>
+            <li>
+                Checked
+            </li>
+            <li>
+                Empty
+            </li>
+            <li>
+                Enabled
+            </li>
+            <li>
+                Hover
+            </li>
+            <li>
+                Focus
+            </li>
+            <li>
+                Visited
+            </li>
 
         <h1 class="enfase">
-            Alguns Pseudo elementos
+            Alguns Pseudo elementos (::)
         </h1>
+            <li>
+                After
+            </li>
+            <li>
+                Before
+            </li>
+            <li>
+                Backdrop
+            </li>
+            <li>
+                Content
+            </li>
+            <li>
+                Cue
+            </li>
 
-        <h2>
-            After
-        </h2>
-
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias perferendis iusto vitae provident sunt veritatis debitis, temporibus ex enim aspernatur maiores nostrum dolor incidunt veniam sequi in ipsa rem qui.
+        <h1 
+        class="enfase">Child (>)
+    </h1>
+        <p> 
+            Seleciona elementos com base em suas posições, o filho de um elemento.
         </p>
 
-        <h2>
-            Before
-        </h2>
-
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias perferendis iusto vitae provident sunt veritatis debitis, temporibus ex enim aspernatur maiores nostrum dolor incidunt veniam sequi in ipsa rem qui.
-        </p>
-
-        <h2>
-            Backdrop
-        </h2>
-
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias perferendis iusto vitae provident sunt veritatis debitis, temporibus ex enim aspernatur maiores nostrum dolor incidunt veniam sequi in ipsa rem qui.
-        </p>
-
-        <h2>
-            Content
-        </h2>
-
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias perferendis iusto vitae provident sunt veritatis debitis, temporibus ex enim aspernatur maiores nostrum dolor incidunt veniam sequi in ipsa rem qui.
-        </p>
-
-        <h2>
-            Cue
-        </h2>
-        
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias perferendis iusto vitae provident sunt veritatis debitis, temporibus ex enim aspernatur maiores nostrum dolor incidunt veniam sequi in ipsa rem qui.
-        </p>
+        <footer>
+            <a href=https://www.cursoemvideo.com target="_blank" rel="external"> Aula do Curso em Video.</a>
+        </footer>
     </main>
+    
 </body>
 </html>
